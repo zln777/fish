@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>index</title>
+  <style>
+    /* 顶部padding */
+    body{padding-top: 10px;}
+    /* 最外层父元素 */
+    .container{
+      width: 800px;height: 600px;  /*背景图宽高*/
+      margin: 0 auto;
+      border: 1px solid #e00012;
+    }
+    /* 画布容器 */
+    #allCanvas{
+      width: 800px;height: 600px;
+      position: relative;
+      margin: 0;
+    }
+    /* 画布一 */
+    #can1{
+      position: absolute;
+      width: 800px;height: 600px;
+      left: 0;bottom: 0;
+      z-index: 1;
+    }
+    /* 画布二 */
+    #can2{
+      position: absolute;
+      width: 800px;height: 600px;
+      left: 0;bottom: 0;
+      z-index: 0;
+    }
+    /* 画布三 */
+    #can3{
+      position: absolute;
+      width: 800px;height: 600px;
+      left: 0;bottom: 0;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <!-- 最外层父元素 -->
+  <div class="container">
+    <!-- 画布容器 -->
+    <div id="allCanvas">
+      <!-- 画布3 游戏开始前介绍信息 -->
+      <canvas id="can3" width="800" height="600"></canvas>
+      <!-- 画布1 前  大鱼,小鱼,分数 -->
+      <canvas id="can1" width="800" height="600"></canvas>
+      <!-- 画布2 后  背景,海葵,食物 -->
+      <canvas id="can2" width="800" height="600"></canvas>
+    </div>
+  </div>
+  <script src="js/commonFunctions.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/ane.js"></script>
+  <script src="js/food.js"></script>
+  <script src="js/bigfish.js"></script>
+  <script src="js/collsion.js"></script>
+  <script src="js/score.js"></script>
+  <script src="js/startMsg.js"></script>
+</body>
+</html>
